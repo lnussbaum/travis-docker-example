@@ -6,3 +6,5 @@ services:
 script:
         - cat /etc/debian/release
         - cat /etc/lsb_release
+        - docker pull debian:stretch
+        - docker run debian:stretch cat /etc/debian_version
