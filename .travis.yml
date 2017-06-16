@@ -3,7 +3,11 @@ sudo: required
 services:
   - docker
 
+env:
+        - IMG=debian:stretch
+        - IMG=debian:wheezy
+
 script:
         - cat /etc/debian_version
-        - docker pull debian:stretch
-        - docker run debian:stretch cat /etc/debian_version
+        - docker pull $IMG
+        - docker run $IMG cat /etc/debian_version
