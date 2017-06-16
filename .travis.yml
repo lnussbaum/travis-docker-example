@@ -1,2 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
 script:
-  - ls
+        - cat /etc/debian/release
+        - cat /etc/lsb_release
